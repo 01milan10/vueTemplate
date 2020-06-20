@@ -1,6 +1,6 @@
 <template>
   <v-container class="mt-16">
-    <v-row class="align-center justify-center mx-10">
+    <v-row class="align-center justify-center mx-10 flex-wrap-reverse">
       <v-col cols="12" sm="12" lg="4">
         <v-hover v-slot:default="{hover}">
           <v-card flat class="d-flex flex-column" height="auto">

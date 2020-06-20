@@ -50,13 +50,13 @@
           class="font-weight-light grey--text mt-3 px-4 text-center"
         >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, facilis!</p>
         <v-container>
-          <v-row class="mr-n15 my-5 justify-center" style="width:900px">
+          <v-row class="my-5">
             <v-col cols="12" sm="12" md="6" lg="4" v-for="(person,i) in team" :key="i">
               <v-hover v-slot:default="{hover}">
                 <v-card
                   class="mx-auto mt-3 card rounded-t-xl rounded-b-xl"
                   :class="`${hover?'blue':'grey lighten-4'}`"
-                  max-width="300"
+                  width="370"
                   :elevation="hover?7:2"
                 >
                   <v-img id="img" :src="person.photo">
@@ -79,7 +79,7 @@
                           </v-hover>
                           <v-hover v-slot:default="{hover}">
                             <v-btn icon>
-                              <v-icon class="mx-2" :color="`${hover?'blue':'grey'}`">mdi-facebook</v-icon>
+                              <v-icon class="mx-2" :color="`${hover?'blue':'grey'}`">mdi-instagram</v-icon>
                             </v-btn>
                           </v-hover>
                         </span>
