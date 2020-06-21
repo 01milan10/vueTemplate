@@ -139,7 +139,7 @@
                 height="65"
               >
                 <form class="ml-4">
-                  <v-text-field label="Email" :rules="emailRules"></v-text-field>
+                  <v-text-field label="Email" :rules="emailRules" clearable></v-text-field>
                 </form>
                 <v-hover v-slot:default="{hover}">
                   <v-btn icon text class="ml-3 mr-3">

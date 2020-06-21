@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-container fluid class="grey lighten-3 my-16">
+    <v-container fluid class="grey lighten-4 my-16">
       <v-row class="flex-column align-center mt-7">
         <h1 class="font-weight-light display-1">About Us</h1>
         <v-divider class="black" width="25%"></v-divider>
@@ -9,7 +9,7 @@
             <v-col cols="12" sm="12" md="5" lg="3" class="px-10">
               <v-img src="/img/about-us.svg" contain max-height="500px"></v-img>
             </v-col>
-            <v-col cols="12" sm="12" md="5" lg="3" class="ml-16 pl-5">
+            <v-col cols="12" sm="12" md="5" lg="3">
               <v-container>
                 <h2 class="font-weight-light">Our Mission</h2>
                 <p
@@ -47,57 +47,54 @@
         <h1 class="display-1 font-weight-light text-center">Our Team</h1>
         <v-divider class="black" width="25%"></v-divider>
         <p
-          class="font-weight-light grey--text mt-3 px-4 text-center"
+          class="font-weight-light grey--text mt-3 text-center"
         >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, facilis!</p>
-        <v-container>
-          <v-row class="my-5">
-            <v-col cols="12" sm="12" md="6" lg="4" v-for="(person,i) in team" :key="i">
-              <v-hover v-slot:default="{hover}">
-                <v-card
-                  class="mx-auto mt-3 card rounded-t-xl rounded-b-xl"
-                  :class="`${hover?'blue':'grey lighten-4'}`"
-                  width="370"
-                  :elevation="hover?7:2"
-                >
-                  <v-img id="img" :src="person.photo">
-                    <v-expand-transition>
-                      <div
-                        v-if="hover"
-                        class="d-flex justify-center black darken-4 reveal transition-fast-in-fast-out"
-                        style="height:10%"
-                      >
-                        <span>
-                          <v-hover v-slot:default="{hover}">
-                            <v-btn icon>
-                              <v-icon class="mx-2" :color="`${hover?'blue':'grey'}`">mdi-facebook</v-icon>
-                            </v-btn>
-                          </v-hover>
-                          <v-hover v-slot:default="{hover}">
-                            <v-btn icon>
-                              <v-icon class="mx-2" :color="`${hover?'blue':'grey'}`">mdi-twitter</v-icon>
-                            </v-btn>
-                          </v-hover>
-                          <v-hover v-slot:default="{hover}">
-                            <v-btn icon>
-                              <v-icon class="mx-2" :color="`${hover?'blue':'grey'}`">mdi-instagram</v-icon>
-                            </v-btn>
-                          </v-hover>
-                        </span>
-                      </div>
-                    </v-expand-transition>
-                  </v-img>
-                  <v-card-title
-                    class="my-2 font-weight-light"
-                    :class="`${hover?'black--text':''}`"
-                  >{{person.name}}</v-card-title>
-                  <v-card-subtitle
-                    :class="`${hover?'white--text':'blue--text'}`"
-                  >{{person.position}}</v-card-subtitle>
-                </v-card>
-              </v-hover>
-            </v-col>
-          </v-row>
-        </v-container>
+        <v-row class="my-5 justify-center">
+          <v-col cols="12" sm="6" md="6" lg="4" v-for="(person,i) in team" :key="i">
+            <v-hover v-slot:default="{hover}">
+              <v-card
+                class="mx-auto mt-3 card rounded-t-xl rounded-b-xl"
+                :class="`${hover?'blue':'grey lighten-4'}`"
+                width="370"
+                :elevation="hover?7:2"
+              >
+                <v-img id="img" :src="person.photo">
+                  <v-expand-transition>
+                    <div
+                      v-if="hover"
+                      class="d-flex justify-center black darken-4 reveal transition-fast-in-fast-out"
+                      style="height:10%"
+                    >
+                      <span>
+                        <v-hover v-slot:default="{hover}">
+                          <v-btn icon>
+                            <v-icon class="mx-2" :color="`${hover?'blue':'grey'}`">mdi-facebook</v-icon>
+                          </v-btn>
+                        </v-hover>
+                        <v-hover v-slot:default="{hover}">
+                          <v-btn icon>
+                            <v-icon class="mx-2" :color="`${hover?'blue':'grey'}`">mdi-twitter</v-icon>
+                          </v-btn>
+                        </v-hover>
+                        <v-hover v-slot:default="{hover}">
+                          <v-btn icon>
+                            <v-icon class="mx-2" :color="`${hover?'blue':'grey'}`">mdi-instagram</v-icon>
+                          </v-btn>
+                        </v-hover>
+                      </span>
+                    </div>
+                  </v-expand-transition>
+                </v-img>
+                <v-card-title
+                  class="my-2 font-weight-light"
+                  :class="`${hover?'black--text':''}`"
+                >{{person.name}}</v-card-title>
+                <v-card-subtitle :class="`${hover?'white--text':'blue--text'}`">{{person.position}}</v-card-subtitle>
+              </v-card>
+            </v-hover>
+          </v-col>
+          <v-btn rounded text class="mt-7 blue--text" to="/our-team">see more..</v-btn>
+        </v-row>
       </v-row>
     </v-container>
   </div>

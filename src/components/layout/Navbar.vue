@@ -54,25 +54,6 @@
             </v-list-item>
           </v-list>
         </v-menu>
-
-        <v-hover v-slot:default="{hover}">
-          <v-btn
-            class="t-btn font-weight-light"
-            text
-            :color="`${hover?'blue':'grey'}`"
-            to="/contact-us"
-            :elevation="hover?1:0"
-          >Contact Us</v-btn>
-        </v-hover>
-        <v-hover v-slot:default="{hover}">
-          <v-btn
-            class="t-btn font-weight-light"
-            text
-            :color="`${hover?'blue':'grey'}`"
-            to="/blog"
-            :elevation="hover?1:0"
-          >Blog</v-btn>
-        </v-hover>
         <v-hover v-slot:default="{hover}">
           <v-btn
             class="t-btn font-weight-light"
@@ -81,6 +62,24 @@
             to="/testimonials"
             :elevation="hover?1:0"
           >Testimonials</v-btn>
+        </v-hover>
+        <v-hover v-slot:default="{hover}">
+          <v-btn
+            class="t-btn font-weight-light"
+            text
+            :color="`${hover?'blue':'grey'}`"
+            to="/gallery"
+            :elevation="hover?1:0"
+          >Gallery</v-btn>
+        </v-hover>
+        <v-hover v-slot:default="{hover}">
+          <v-btn
+            class="t-btn font-weight-light"
+            text
+            :color="`${hover?'blue':'grey'}`"
+            to="/contact-us"
+            :elevation="hover?1:0"
+          >Contact Us</v-btn>
         </v-hover>
         <v-hover v-slot:default="{hover}">
           <v-btn
