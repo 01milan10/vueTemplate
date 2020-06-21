@@ -5,6 +5,7 @@
     <About />
     <Testimonials />
     <Album />
+    <Contact />
   </div>
 </template>
 
@@ -14,13 +15,15 @@ import Features from "@/components/home/Features";
 import About from "@/components/home/About";
 import Testimonials from "@/components/home/Testimonials";
 import Album from "@/components/home/Album";
+import Contact from "@/components/home/Contact-Form";
 export default {
   components: {
     Home,
     Features,
     About,
     Testimonials,
-    Album
+    Album,
+    Contact
   }
 };
 </script>

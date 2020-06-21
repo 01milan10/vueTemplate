@@ -152,5 +152,6 @@ export default {
 <style scoped>
 .t-btn:hover {
   transform: scale(0.92);
+  transition: 0.3s ease-in-out;
 }
 </style>

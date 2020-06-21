@@ -1,11 +1,11 @@
 <template>
   <v-container fluid class="my-10">
     <v-row class="mx-auto flex-column align-center">
-      <h1 class="display-1 font-weight-light text-center">Our Photo ALbum</h1>
+      <h1 class="display-1 font-weight-light text-center">Our Photo Album</h1>
       <v-divider class="black" width="25%"></v-divider>
       <v-container class="mt-5">
         <v-row justify="center">
-          <v-col cols="12" sm="6" md="6" lg="2" v-for="(photo,i) in gallery" :key="i">
+          <v-col cols="12" sm="4" md="3" lg="2" v-for="(photo,i) in gallery" :key="i">
             <v-card flat class="my-1 rounded-t-lg">
               <v-img class="img" :src="photo.item" height="350"></v-img>
             </v-card>
@@ -48,6 +48,7 @@ export default {
 
 <style scoped>
 .img:hover {
-  transform: scale(1.05);
+  transform: scale(1.025);
+  transition: 0.4s ease;
 }
 </style>

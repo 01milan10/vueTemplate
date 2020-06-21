@@ -3,7 +3,14 @@
     <v-row class="mx-auto flex-column align-center justify-center">
       <h1 class="font-weight-light display-1 text-center pt-10">Testimonials</h1>
       <v-divider class="black" width="25%"></v-divider>
-      <v-carousel hide-delimiters :cycle="true" :continuous="true" style="width: 75%">
+      <v-carousel
+        light
+        hide-delimiter-background
+        :show-arrows="false"
+        :cycle="true"
+        :continuous="true"
+        style="width: 75%"
+      >
         <v-carousel-item v-for="(carousel_item, i) in carousel_items" :key="i">
           <v-row class="flex-column align-center mx-auto mt-10">
             <v-avatar size="100">

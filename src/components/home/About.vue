@@ -55,10 +55,10 @@
               <v-card
                 class="mx-auto mt-3 card rounded-t-xl rounded-b-xl"
                 :class="`${hover?'blue':'grey lighten-4'}`"
-                width="370"
+                max-width="370"
                 :elevation="hover?7:2"
               >
-                <v-img id="img" :src="person.photo">
+                <v-img class="img" :src="person.photo">
                   <v-expand-transition>
                     <div
                       v-if="hover"
@@ -151,7 +151,8 @@ export default {
   width: 100%;
 }
 .card:hover {
-  transform: scale(1.01);
+  transform: scale(1.03);
+  transition: 0.3s ease-in-out;
 }
 p {
   line-height: 30px;
