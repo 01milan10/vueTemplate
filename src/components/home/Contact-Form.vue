@@ -1,5 +1,5 @@
 <template>
-  <v-parallax src="/img/parallax-section.jpg" height="auto">
+  <v-parallax src="/img/parallax-section.jpg">
     <v-container fluid class="mx-auto my-10" style="width:50%">
       <v-row class="flex-column align-center my-10">
         <h1 class="display-1 font-weight-light text-center white--text">Contact Us</h1>
