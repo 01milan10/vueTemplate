@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid class="grey mt-16">
+  <v-container fluid class="mt-5">
     <v-row class="align-center justify-center mx-auto flex-wrap-reverse">
       <v-col cols="12" sm="12" lg="4">
         <v-hover v-slot:default="{hover}">

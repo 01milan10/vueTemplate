@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid class="mt-16 pt-16">
+  <v-container fluid class="mt-5 pt-10">
     <v-row class="flex-column justify-center align-center mt-7">
       <h1 class="font-weight-light display-1 text-center">Our Services & Features</h1>
       <v-divider class="black" width="25%"></v-divider>
