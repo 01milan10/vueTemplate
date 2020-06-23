@@ -7,18 +7,16 @@
         light
         hide-delimiter-background
         :show-arrows="false"
-        :cycle="true"
         :continuous="true"
         style="width: 75%"
       >
         <v-carousel-item v-for="(carousel_item, i) in carousel_items" :key="i">
-          <v-row class="flex-column align-center mx-auto mt-10">
+          <v-row class="justify-center mx-auto mt-10">
             <v-avatar size="100">
               <v-img :src="carousel_item.avatar"></v-img>
             </v-avatar>
             <p
-              class="grey--text mt-5 font-weight-light font-italic carousel-content text-center text-sm-h6"
-              style="width: 50%"
+              class="grey--text mt-5 font-weight-light font-italic carousel-content text-center text-sm-body-2 text-md-h6 text-lg-h5 text-xl-h4"
             >"{{carousel_item.content}}"</p>
             <span class="black--text font-weight-medium mt-5">{{carousel_item.person}}</span>
           </v-row>
@@ -69,7 +67,6 @@ export default {
 
 <style scoped>
 .carousel-content {
-  font-size: 25px;
   line-height: 1.7;
 }
 </style>

@@ -2,10 +2,17 @@
   <nav class="ma">
     <v-app-bar flat app color="black">
       <router-link to="/">
-        <v-img src="/img/footer-icon.png" contain max-height="150" max-width="150px" alt="logo"></v-img>
+        <v-img
+          src="/img/footer-icon.png"
+          class="ml-4"
+          contain
+          max-height="150"
+          max-width="150px"
+          alt="logo"
+        ></v-img>
       </router-link>
       <v-spacer></v-spacer>
-      <v-toolbar-items class="hidden-xs-only">
+      <v-toolbar-items class="hidden-sm-and-down">
         <v-hover v-slot:default="{hover}">
           <v-btn
             class="t-btn font-weight-light"
@@ -91,11 +98,11 @@
           >Login</v-btn>
         </v-hover>
       </v-toolbar-items>
-      <span class="hidden-sm-and-up">
+      <span class="hidden-md-and-up">
         <v-app-bar-nav-icon class="grey--text" @click.stop="drawer=!drawer"></v-app-bar-nav-icon>
       </span>
     </v-app-bar>
-    <v-navigation-drawer app width="150px" color="black" class="hidden-sm-and-up" v-model="drawer">
+    <v-navigation-drawer app width="150px" color="black" class="hidden-md-and-up" v-model="drawer">
       <v-list shaped>
         <v-list-item v-for="(link,i) in links" :key="i" router :to="link.route" dark color="blue">
           <v-list-item-content>

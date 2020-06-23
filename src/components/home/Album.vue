@@ -7,7 +7,7 @@
         <v-row justify="center">
           <v-col cols="12" sm="4" md="3" lg="2" v-for="(photo,i) in gallery" :key="i">
             <v-card flat class="my-1 rounded-t-lg">
-              <v-img class="img" :src="photo.item" height="350"></v-img>
+              <v-img class="img" :src="photo.item" height="200"></v-img>
             </v-card>
           </v-col>
         </v-row>
