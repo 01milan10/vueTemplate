@@ -40,5 +40,8 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+.v-parallax img {
+  opacity: 0.5;
+}
 </style>

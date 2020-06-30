@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-container fluid class="grey lighten-4 my-16">
+    <v-container fluid class="grey lighten-4">
       <v-row class="flex-column align-center mt-7">
         <h1 class="font-weight-light display-1">About Us</h1>
         <v-divider class="black" width="25%"></v-divider>
@@ -34,6 +34,7 @@
                     text
                     :elevation="hover?3:0"
                     :class="`${hover?'blue--text':'blue white--text'}`"
+                    to="/about-us"
                   >Learn More</v-btn>
                 </v-hover>
               </v-container>
@@ -55,7 +56,7 @@
               <v-card
                 class="mx-auto mt-3 card rounded-t-xl rounded-b-xl"
                 :class="`${hover?'blue':'grey lighten-4'}`"
-                :elevation="hover?7:2"
+                :elevation="hover?5:2"
                 max-width="200"
               >
                 <v-img class="img" :src="person.photo">
@@ -63,24 +64,24 @@
                     <div
                       v-if="hover"
                       class="d-flex justify-center black darken-4 reveal transition-fast-in-fast-out"
-                      style="height:10%"
+                      style="height:15%"
                     >
                       <span>
-                        <v-hover v-slot:default="{hover}">
-                          <v-btn icon>
+                        <v-btn icon>
+                          <v-hover v-slot:default="{hover}">
                             <v-icon class="mx-2" :color="`${hover?'blue':'grey'}`">mdi-facebook</v-icon>
-                          </v-btn>
-                        </v-hover>
-                        <v-hover v-slot:default="{hover}">
-                          <v-btn icon>
+                          </v-hover>
+                        </v-btn>
+                        <v-btn icon>
+                          <v-hover v-slot:default="{hover}">
                             <v-icon class="mx-2" :color="`${hover?'blue':'grey'}`">mdi-twitter</v-icon>
-                          </v-btn>
-                        </v-hover>
-                        <v-hover v-slot:default="{hover}">
-                          <v-btn icon>
+                          </v-hover>
+                        </v-btn>
+                        <v-btn icon>
+                          <v-hover v-slot:default="{hover}">
                             <v-icon class="mx-2" :color="`${hover?'blue':'grey'}`">mdi-instagram</v-icon>
-                          </v-btn>
-                        </v-hover>
+                          </v-hover>
+                        </v-btn>
                       </span>
                     </div>
                   </v-expand-transition>

@@ -32,7 +32,7 @@
             :elevation="hover?1:0"
           >Features</v-btn>
         </v-hover>
-        <v-menu offset-y>
+        <v-menu offset-y open-on-hover>
           <template v-slot:activator="{ on, attrs }">
             <v-hover v-slot:default="{hover}">
               <v-btn
@@ -42,6 +42,7 @@
                 v-bind="attrs"
                 v-on="on"
                 :elevation="hover?1:0"
+                to="/about-us"
               >
                 <span class="font-weight-light">About Us</span>
                 <v-icon right>mdi-chevron-down</v-icon>
@@ -50,11 +51,10 @@
           </template>
           <v-list dense rounded>
             <v-list-item
-              v-for="(item, index) in links"
+              v-for="(item, index) in drop_links"
               :key="index"
-              router
               :to="item.route"
-              color="pink"
+              color="primary"
               class="text-center"
             >
               <v-list-item-title>{{ item.title }}</v-list-item-title>
@@ -88,12 +88,15 @@
             :elevation="hover?1:0"
           >Contact Us</v-btn>
         </v-hover>
+        <Login />
+      </v-toolbar-items>
+      <v-toolbar-items class="hidden-md-and-up">
         <v-hover v-slot:default="{hover}">
           <v-btn
-            class="t-btn font-weight-light"
+            class="font-weight-light"
             text
             :color="`${hover?'blue':'grey'}`"
-            to="/login"
+            href="/login"
             :elevation="hover?1:0"
           >Login</v-btn>
         </v-hover>
@@ -104,7 +107,14 @@
     </v-app-bar>
     <v-navigation-drawer app width="150px" color="black" class="hidden-md-and-up" v-model="drawer">
       <v-list shaped>
-        <v-list-item v-for="(link,i) in links" :key="i" router :to="link.route" dark color="blue">
+        <v-list-item
+          v-for="(link,i) in nav_links"
+          :key="i"
+          router
+          :to="link.route"
+          dark
+          color="blue"
+        >
           <v-list-item-content>
             <v-list-item-title class="grey--text font-weight-light">{{link.title}}</v-list-item-title>
           </v-list-item-content>
@@ -115,12 +125,20 @@
 </template>
 
 <script>
+import Login from "../auth/Login";
 export default {
   data() {
     return {
       snackbar: false,
       drawer: false,
-      links: [
+      drop_links: [
+        {
+          title: "Our Team",
+          route: "/our-team"
+        }
+      ],
+      dropdown_font: ["Arial", "Times New Roman", "Calibri", "Roboto"],
+      nav_links: [
         {
           title: "Home",
           route: "/"
@@ -138,27 +156,25 @@ export default {
           route: "/testimonials"
         },
         {
-          title: "Blogs",
-          route: "/blogs"
+          title: "Gallery",
+          route: "/gallery"
         },
         {
           title: "Contact Us",
           route: "/contact-us"
-        },
-        {
-          title: "Login",
-          route: "/login"
         }
-      ],
-      dropdown_font: ["Arial", "Times New Roman", "Calibri", "Roboto"]
+      ]
     };
+  },
+  components: {
+    Login
   }
 };
 </script>
 
 <style scoped>
-.t-btn:hover {
-  transform: scale(0.92);
-  transition: 0.3s ease-in-out;
-}
+/* .t-btn:hover {
+  transform: scale(1.02);
+  transition: 0.35s ease-in-out;
+} */
 </style>

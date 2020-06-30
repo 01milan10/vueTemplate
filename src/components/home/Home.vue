@@ -1,11 +1,10 @@
 <template>
   <v-container fluid class="mt-5">
     <v-row class="align-center justify-center mx-auto flex-wrap-reverse">
-      <v-col cols="12" sm="12" lg="4">
+      <v-col cols="12" sm="12" lg="3">
         <v-hover v-slot:default="{hover}">
-          <v-card flat class="d-flex flex-column" height="auto">
+          <v-card flat class="d-flex flex-column mx-auto" height="auto">
             <h1 class="font-weight-light">Make Your Business More Profitable</h1>
-            <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis, molestias.</span>
             <v-row class="justify-start">
               <v-btn rounded color="blue" text :elevation="hover?3:0">
                 take tour
@@ -39,9 +38,9 @@
                 style="height: 35%;"
               >
                 <span
-                  class="font-weight-light text-uppercase mb-2"
+                  class="font-weight-light text-uppercase mb-2 text-sm-h6"
                 >Join us on our incredible journey...</span>
-                <v-btn rounded outlined color="black">Join Now</v-btn>
+                <v-btn rounded outlined color="black" class="text-sm">Join Now</v-btn>
               </div>
             </v-expand-transition>
           </v-card>

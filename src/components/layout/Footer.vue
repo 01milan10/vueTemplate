@@ -31,66 +31,65 @@
           <v-row class="d-flex flex-column align-center">
             <span class="text-h6 text-uppercase white--text">Navigation</span>
             <v-divider class="grey darken-2 mt-3" width="50%"></v-divider>
-            <v-row class="d-flex flex-column mt-2">
-              <v-hover v-slot:default="{hover}">
-                <v-btn
-                  text
-                  rounded
-                  class="pt-1"
-                  :color="`${hover?'blue':'grey'}`"
-                  to="/"
-                  :elevation="hover?1:0"
-                >home</v-btn>
-              </v-hover>
-              <v-hover v-slot:default="{hover}">
-                <v-btn
-                  text
-                  rounded
-                  :color="`${hover?'blue':'grey'}`"
-                  to="/features"
-                  :elevation="hover?1:0"
-                >features</v-btn>
-              </v-hover>
-              <v-hover v-slot:default="{hover}">
-                <v-btn
-                  text
-                  rounded
-                  class="pt-1"
-                  :color="`${hover?'blue':'grey'}`"
-                  to="/about-us"
-                  :elevation="hover?1:0"
-                >about us</v-btn>
-              </v-hover>
-              <v-hover v-slot:default="{hover}">
-                <v-btn
-                  text
-                  rounded
-                  class="pt-1"
-                  :color="`${hover?'blue':'grey'}`"
-                  to="/contact-us"
-                  :elevation="hover?1:0"
-                >contact us</v-btn>
-              </v-hover>
-              <v-hover v-slot:default="{hover}">
-                <v-btn
-                  text
-                  rounded
-                  class="pt-1"
-                  :color="`${hover?'blue':'grey'}`"
-                  to="/blog"
-                  :elevation="hover?1:0"
-                >blog</v-btn>
-              </v-hover>
-              <v-hover v-slot:default="{hover}">
-                <v-btn
-                  text
-                  rounded
-                  class="pt-1"
-                  :color="`${hover?'blue':'grey'}`"
-                  to="/testimonials"
-                  :elevation="hover?1:0"
-                >testimonials</v-btn>
-              </v-hover>
+            <v-row class="mt-2">
+              <v-col class="mr-2">
+                <p class="text-center font-weight-light">
+                  <v-hover v-slot:default="{hover}">
+                    <router-link
+                      to="/"
+                      class="grey--text text-decoration-none"
+                      :class="`${hover?'blue--text':''}`"
+                    >Home</router-link>
+                  </v-hover>
+                </p>
+                <p class="text-center font-weight-light">
+                  <v-hover v-slot:default="{hover}">
+                    <router-link
+                      to="/features"
+                      class="grey--text text-decoration-none"
+                      :class="`${hover?'blue--text':''}`"
+                    >Features</router-link>
+                  </v-hover>
+                </p>
+                <p class="text-center font-weight-light">
+                  <v-hover v-slot:default="{hover}">
+                    <router-link
+                      to="/about-us"
+                      class="grey--text text-decoration-none"
+                      :class="`${hover?'blue--text':''}`"
+                    >About us</router-link>
+                  </v-hover>
+                </p>
+              </v-col>
+              <v-col class="ml-2">
+                <p class="text-center font-weight-light">
+                  <v-hover v-slot:default="{hover}">
+                    <router-link
+                      to="/contact-us"
+                      class="grey--text text-decoration-none"
+                      :class="`${hover?'blue--text':''}`"
+                    >Contact Us</router-link>
+                  </v-hover>
+                </p>
+                <p class="text-center font-weight-light">
+                  <v-hover v-slot:default="{hover}">
+                    <router-link
+                      to="/blog"
+                      class="grey--text text-decoration-none"
+                      :class="`${hover?'blue--text':''}`"
+                    >Blog</router-link>
+                  </v-hover>
+                </p>
+                <p class="text-center font-weight-light">
+                  <v-hover v-slot:default="{hover}">
+                    <router-link
+                      to="/testimonials"
+                      class="grey--text text-decoration-none"
+                      :class="`${hover?'blue--text':''}`"
+                    >Testimonials</router-link>
+                  </v-hover>
+                </p>
+              </v-col>
             </v-row>
           </v-row>
         </v-col>
